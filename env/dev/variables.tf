@@ -49,3 +49,17 @@ variable "vmss_name" {
   type        = string
   description = "ID of the subnet where the scale set will be deployed"
 }
+
+variable "PublicIPAddress_name" {
+  type        = string
+  description = "ID of the subnet where the scale set will be deployed"
+}
+variable "frontend_port" {
+  type        = number
+  description = "Frontend port for the Load Balancer rule"
+}
+
+variable "backend_port" {
+  type        = number
+  description = "Backend port for the Load Balancer rule"
+}

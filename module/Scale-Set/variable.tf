@@ -22,3 +22,12 @@ variable "vmss_name" {
   type        = string
   description = "Admin username for the virtual machine scale set"
 }
+
+variable "nat_rule_id" {
+  type        = string
+  description = "ID of the backend address pool for the load balancer"
+}
+variable "bk_pool_id" {
+  type        = string
+  description = "ID of the backend address pool for the load balancer"
+}
