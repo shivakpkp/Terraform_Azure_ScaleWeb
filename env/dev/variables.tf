@@ -13,9 +13,9 @@ variable "resource_group_name" {
 variable "address_space" {
   type        = list(string)
   description = "address space for the VNet"
-}   
+}
 variable "subnets" {
-  type        = map(object({
+  type = map(object({
     subnet_prefix = string
   }))
   description = "list of subnets to be created in the VNet"
@@ -37,4 +37,15 @@ variable "security_rule" {
     destination_address_prefix = string
   }))
   description = "List of security rules for the Network Security Group"
- }
+}
+
+variable "instance_count" {
+  type        = number
+  description = "number of instances"
+  default     = 2
+}
+
+variable "vmss_name" {
+  type        = string
+  description = "ID of the subnet where the scale set will be deployed"
+}
