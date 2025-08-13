@@ -5,7 +5,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   sku                 = "Standard_F2"
   instances           = var.instance_count
   admin_username      = "adminuser"
-
+  custom_data    = base64encode(file("cloud-init.yml"))
   admin_password = "P@ssword1234!"
   disable_password_authentication = false
 
